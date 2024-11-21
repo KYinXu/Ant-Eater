@@ -6,26 +6,37 @@ export const getRecipes = async (ingredients: string[]) => {
 
     ingredients = ['butter', 'eggs'];
     interface requestParams {
-        needsimage: number,
-        app: number,
+        needsimage: string,
+        app: string,
         kitchen: string[],
-        start: number,
-        fave: boolean,
+        focus: string,
+        exclude: string,
+        kw: string,
+        catname: string,
+        start: string,
+        fave: string,
         lang: string,
-        cv: number
+        cv: string
 
+    }
+    const headers = {
+        'needsimage': '1',
+        'app': '1'
     }
     const payload: requestParams = {
-        needsimage: 1,
-        app: 1,
-        kitchen: ['jalapeno','potato','bell', 'pepper','carrot','egg'],
-        start: 0,
-        fave: false,
-        lang: 'en',
-        cv: 2
+        
+        'kitchen': ['jalapeno','potato','bell', 'pepper','carrot','egg'],
+        'focus': '',
+        'exclude': '',
+        'kw': '',
+        'catname': '',
+        'start': '0',
+        'fave': 'false',
+        'lang': 'en',
+        'cv': '2'
     }
 
-    axios.post(`${API_BASE_URL}`,{params: payload})
+    axios.post(`${API_BASE_URL}`,{headers: headers, params: payload})
     .then(response => {
         console.log(response)
     })
