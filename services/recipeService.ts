@@ -1,16 +1,20 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://api.example.com';
+const API_BASE_URL = 'https://d1.supercook.com/dyn/results';
 
 export const getRecipes = async () => {
-  try {
-    const response = await axios.get(`${API_BASE_URL}`);
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching recipes:', error);
-    throw error;
-  }
-};
+
+    const payload = {
+        
+    }
+    axios.get(`${API_BASE_URL}`, payload)
+    .then(response => {
+
+    })
+    .catch(error => {
+        console.error('Error fetching recipes: ', error)
+    })
+}
 
 export const getRecipeById = async (id: string) => {
   try {
@@ -20,3 +24,8 @@ export const getRecipeById = async (id: string) => {
     throw error;
   }
 };
+
+axios.post('https://d1.supercook.com/dyn/results', payload)
+  .then(response => {
+    console.log('API Response:', response.data);
+  })
