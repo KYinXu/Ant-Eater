@@ -8,6 +8,7 @@ export default function Home() {
       <Link href="/search">
         Go to search page
       </Link>
+      <br />
       <SimpleButton />
     </div>
   );

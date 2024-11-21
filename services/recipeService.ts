@@ -18,14 +18,14 @@ export const getRecipes = async (ingredients: string[]) => {
     const payload: requestParams = {
         needsimage: 1,
         app: 1,
-        kitchen: ingredients,
+        kitchen: ['jalapeno','potato','bell', 'pepper','carrot','egg'],
         start: 0,
         fave: false,
         lang: 'en',
         cv: 2
     }
 
-    axios.get(`${API_BASE_URL}`,{params: payload})
+    axios.post(`${API_BASE_URL}`,{params: payload})
     .then(response => {
         console.log(response)
     })
