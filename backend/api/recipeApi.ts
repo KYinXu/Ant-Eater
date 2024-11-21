@@ -47,32 +47,3 @@ export const getRecipes = async (ingredients: string[]) => {
     })
 }
 
-export const getRecipeById = async (id: string) => {
-  try {
-    return "Recipe";
-  } catch (error) {
-    console.error(`Error fetching recipe with id ${id}:`, error);
-    throw error;
-  }
-};
-
-// axios.post('https://d1.supercook.com/dyn/results', payload)
-//   .then(response => {
-//     console.log('API Response:', response.data);
-//   })
-
-  /*
-  needsimage=1&app=1&kitchen=butter%2Colive%20oil%2Cgarlic%2Cketchup%2Cegg&focus=&exclude=&kw=&catname=&start=0&fave=false&lang=en&cv=2
-
-    needsimage: 1,
-    app: 1,
-    kitchen: butter,olive oil,garlic,ketchup,egg,
-    focus: ,
-    exclude: ,
-    kw: ,
-    catname: ,
-    start: 0,
-    fave: false,
-    lang: en,
-    cv: 2
-  */
