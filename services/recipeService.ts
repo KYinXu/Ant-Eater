@@ -9,7 +9,7 @@ export const getRecipes = async (ingredients: string[]) => {
     'app': '1',
   }
   const params = {
-    kitchen: 'jalapeno,potato,bell pepper,carrot,egg',
+    kitchen: ingredients.join(','),
     focus: '',
     exclude: '',
     kw: '',

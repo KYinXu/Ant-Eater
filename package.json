@@ -12,6 +12,7 @@
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "fs": "^0.0.1-security",
     "inferencejs": "^1.0.16",
     "next": "^15.0.3",
     "nodemon": "^3.1.7",
