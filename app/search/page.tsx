@@ -7,9 +7,14 @@ import { runRoboflowInference } from '../../services/visionService';
 export default function SearchPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
+  const [myIngredients, setMyIngredients] = useState<string[]>([]);
+  const [possibleRecipes, setPossibleRecipes] = useState<string[]>([]);
 
   const handleSearchRecipeClick = async () => {
-    await getRecipes(['butter', 'eggs']);
+    // check if myIngredients is empty, then use butter eggs
+    const recipes = myIngredients.length === 0 ? await getRecipes(['butter', 'eggs']) : await getRecipes(myIngredients);
+    // theoretically, possible recipes should be parsed by kyle. then we map each one to a component
+    setPossibleRecipes(await recipes)
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,8 +32,7 @@ export default function SearchPage() {
 
   const handleCVClick = async () => {
     if (base64Image) {
-      // const base64Data = base64Image.split(',')[1]; // Remove the data URL prefix
-      await runRoboflowInference(base64Image);
+      setMyIngredients(await runRoboflowInference(base64Image));
     }
   };
 
