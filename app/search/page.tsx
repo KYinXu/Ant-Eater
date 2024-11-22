@@ -84,20 +84,22 @@ export default function SearchPage() {
             Clear Ingredients
           </SimpleButton>
           </div>
-          <div className="border-t border-gray-300 mt-2 mb-2"></div>
-          <ExpandableSection title="Selected Ingredients">
+          <div className="flex flex-wrap">
             {myIngredients.map(
               (ingredient) =>
-                <Checkbox
+                <SearchItem
                   key={ingredient + "selected"}
-                  isChecked={myIngredients.includes(ingredient)}
-                  label={ingredient}
-                  onToggle={(checked) =>
-                    toggleIngredient(ingredient, checked)
-                  }
+                  //isChecked={myIngredients.includes(ingredient)}
+                  //label={ingredient}
+                  // onToggle={(checked) =>
+                  //   toggleIngredient(ingredient, checked)
+                  // }
+                  text={ingredient}
+                  onClick={()=>{toggleIngredient(ingredient, false)}}
               />
             )}
-          </ExpandableSection>
+          </div>
+          <div className="border-t border-gray-300 mt-2 mb-2"></div>
           {allIngredients.map((object) => (
             <ExpandableSection key={object.group_name} title={object.group_name}>
               {object.ingredients.map(
