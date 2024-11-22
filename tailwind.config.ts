@@ -20,7 +20,8 @@ export default {
         searchGray: "#EBEBEB"
       },
       fontFamily: {
-        ibarra: ['Ibarra Real Nova']
+        ibarra: ['Ibarra Real Nova'],
+        bebas: ['Bebas Neue']
       }
     },
   },
