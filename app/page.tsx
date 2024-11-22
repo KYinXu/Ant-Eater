@@ -37,7 +37,7 @@ export default function Home() {
                     As Pro ZotEaters
                   </h2>
                 </div>
-                <h3 className="text-2xl mb-8 font-ibarra">
+                <h3 className="text-2xl mb-8 font-ibarra text-lext bg-yellow-200 w-4/5">
                   for all ants and eaters.
                   </h3>
                 <Link href="/search" className="bg-gray-200 text-x text-lg font-medium font-serif shadow py-3 px-6 rounded-lg hover:bg-x hover:text-white transition duration-300">
