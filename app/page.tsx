@@ -14,10 +14,10 @@ export default function Home() {
           </Link>
         </nav>
       </header>
-      <div className="container bg-transparent dark:bg-gray-900 mx-28">
+      <div className="mx-28">
         <div className="grid grid-cols-2 min-h-screen text-gray-900">
           <div className="">
-            <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
+            <main className="py-20 px-4">
               <div className=' w-4/5'>
                 <h2 className="text-9xl font-bebas font-black text-left mt-6 text-white">
                   As Pro ZotEaters
@@ -34,7 +34,7 @@ export default function Home() {
           <div className="">
             <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
               <div className=' w-4/5'>
-                <img src="https://i.ibb.co/XV5h9NF/Screen-Shot-2024-11-21-at-12-08-30-AM-removebg-preview.png" className="-mt-16" alt='picture of a banana'></img>
+                <img src="https://i.ibb.co/XV5h9NF/Screen-Shot-2024-11-21-at-12-08-30-AM-removebg-preview.png" className="-mt-16 animate-bounce" alt='picture of a banana'></img>
               </div>
             </main>
           </div>
