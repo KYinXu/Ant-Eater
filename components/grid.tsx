@@ -31,7 +31,7 @@ export const RecipeCard: React.FC<SearchItemProps> = ({title, image, onClick}) =
     //   }}
     <div className="relative bg-indigo-100 size-full overflow-hidden">
       {/* {title} */}
-      <span className="absolute z-10">{title}</span>
+      <span className="absolute left-5 bottom-5 z-10">{title}</span>
       <img className="size-full relative object-fill brightness-75" src={image} />
     </div>
     );
