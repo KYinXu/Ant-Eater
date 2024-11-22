@@ -2,9 +2,10 @@ import React, { useRef } from 'react';
 
 interface CVButtonProps {
   onFileUpload: (file: File) => void;
+  children: React.ReactNode;
 }
 
-const CVButton: React.FC<CVButtonProps> = ({ onFileUpload }) => {
+const CVButton: React.FC<CVButtonProps> = ({ onFileUpload, children}) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
@@ -26,7 +27,7 @@ const CVButton: React.FC<CVButtonProps> = ({ onFileUpload }) => {
         onClick={handleClick}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        Upload and Analyze Image
+        {children}
       </button>
       <input
         type="file"
