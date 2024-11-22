@@ -115,9 +115,9 @@ export default function SearchPage() {
 
         {/* Right side: Everything else */}
         <div className="flex-1 p-4">
-          <SimpleButton onClick={() => handleSearchRecipeClick()}>
+          {/* <SimpleButton onClick={() => handleSearchRecipeClick()}>
             search recipe api
-          </SimpleButton>
+          </SimpleButton> */}
           {possibleRecipes[0] && possibleRecipes[1] && <Grid titles={possibleRecipes[0]} images={possibleRecipes[1]}/>}
         </div>
         
