@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex bg-white h-96 mx-24 rounded-3xl opacity-50">
-        <h2 className="flex font-bebas text-black text-7xl items-center justify-center">
+        <h2 className="flex font-bebas text-black text-7xl justify-center text-center">
           Features
         </h2>
       </div>
