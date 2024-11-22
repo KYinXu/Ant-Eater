@@ -13,7 +13,8 @@ export default {
         foreground: "var(--foreground)",
         selected: "#fb7185",
         big1: "#FA9E00",
-        big2: "#FF00AE"
+        big2: "#FF00AE",
+        x: "#FD4F57"
       },
     },
   },
