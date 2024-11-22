@@ -10,7 +10,6 @@ import CVButton from "../../components/cvButton";
 import allIngredients from "./ingredients";
 import Grid from '../../components/grid';
 import SearchBar from "../../components/searchBar";
-import { getRecipeDetails } from "../../services/recipeService";
 
 export default function SearchPage() {
   const [visibleIngredients, setVisibleIngredients] = useState<string[]>([]);
