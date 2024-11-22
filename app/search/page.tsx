@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { SimpleButton } from '../../components/button';
 import { getRecipes } from '../../services/recipeService';
 import { runRoboflowInference } from '../../services/visionService';
+import { SearchItem } from '../../components/searchItem';
 import ExpandableSection from '../../components/expandableSection';
 import Checkbox from '../../components/checkbox';
 
