@@ -29,12 +29,12 @@ const ExpandableSection: React.FC<ExpandableSectionProps> = ({ title, children }
             </svg>
           )}
         </div>
-        <div className="text-lg font-semibold  ml-2">{title}</div>
+        <div className="text-lg font-semibold ml-2">{title}</div>
       </div>
       <div className="border-t border-gray-300 mt-2 mb-2"></div>
       {isOpen && (
         <div>
-          <div className="p-4">
+          <div className="p-4 ml-5">
             {children}
           </div>
           <div className="border-t border-gray-700 mt-2 mb-2"></div>
