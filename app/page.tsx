@@ -7,15 +7,21 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-bg1 to-bg2 text-white">
       <header className="flex justify-between items-center p-6">
-        <h1 className="text-5xl font-rokkitt text-white ml-7 mt-2">&Eater</h1>
-        <nav>
-          <Link href="/search" className="text-white font-semibold hover:underline -mt-20 mr-10 text-xl">
-            search
-          </Link>
+        <a className="hover:cursor-pointer group"><h1 className="text-5xl font-rokkitt text-white ml-7 mt-2">&Eater</h1>
+        <div className="ml-7 me-7 bg-white h-[5px] w-0 group-hover:w-10/12 transition-all duration-500"></div>
+        </a>
+        
+        <nav className="hover:-translate-y-1 transition-all duration-500">
+          <div className="group">
+            <Link href="/search" className="text-white font-semibold -mt-20 mr-10 text-xl">
+              search
+            </Link>
+            <div className=" bg-white h-[3px] w-0 group-hover:w-3/5 transition-all duration-500"></div>
+          </div>
         </nav>
       </header>
       <div className="flex mx-28 flex-row min-h-screen bg-green-400/0">
-        <main className="py-20 px-4 bg-green-900/0 ml-20">
+        <main className="hover:cursor-default py-20 px-4 bg-green-900/0 ml-20">
           <div className=' w-4/5'>
             <h2 className="text-9xl font-bebas font-black text-left mt-6 text-white">
               As Pro ZotEaters

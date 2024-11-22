@@ -17,10 +17,10 @@ export const RecipeCard: React.FC<SearchItemProps> = ({title, image, rid}) => {
   return (
 
   <div className="relative size-full overflow-hidden ">
-      <div className="hover:text-selected z-10" onMouseEnter={handleClick} onMouseLeave={() => setLink("")}>
+      <div className=" hover:text-selected z-10" onMouseEnter={handleClick} onMouseLeave={() => setLink("")}>
         <div className="group" onClick={handleClick}>
           <img className="z-0 size-full relative object-fill brightness-50" src={image} />
-          <div className="absolute left-5 bottom-5 font-bebas white text-white group-hover:text-selected group-hover:cursor-pointer text-4xl">
+          <div className="absolute left-5 bottom-5 font-bebas white text-white transition ease-in-out duration-300 group-hover:text-selected group-hover:-translate-y-1 group-hover:cursor-pointer text-4xl">
             {title}
           </div>
           
