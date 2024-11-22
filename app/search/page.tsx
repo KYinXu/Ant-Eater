@@ -6,10 +6,12 @@ import { runRoboflowInference } from '../../services/visionService';
 import { SearchItem } from '../../components/searchItem';
 import ExpandableSection from '../../components/expandableSection';
 import Checkbox from '../../components/checkbox';
+import CVButton from '../../components/cvButton';
+import allIngredients from './ingredients';
 
 export default function SearchPage() {
   // hardcoded
-  const [allIngredients, setAllIngredients] = useState<string[]>(["butter", "milk","egg"]);
+  const [visibleIngredients, setVisibleIngredients] = useState<string[]>(allIngredients);
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
@@ -56,23 +58,24 @@ export default function SearchPage() {
 
   return (
     <div>
-      <h1>Search Page</h1>
-
-      <ExpandableSection title="Essentials"> 
+      <h1>&Eaters</h1>
+      <ExpandableSection title="Selected Ingredients"> 
         {allIngredients.map((ingredient) => (
           <Checkbox key={ingredient} isChecked={myIngredients.includes(ingredient)} label={ingredient} onToggle={(checked) => toggleIngredient(ingredient, checked)} />
         ))}
       </ExpandableSection>
       {myIngredients.map((ingredient) => (
-        <span key={ingredient}>{ingredient}</span>
+        <h1 key={ingredient}>{ingredient}</h1>
       ))}
       <SimpleButton onClick={clearIngredients}>Clear Ingredients</SimpleButton>
       <p>This is the search page.</p>
-      <SearchItem text="TESTING" onClick={() => {}}/>
+      {/* <SearchItem text="TESTING" onClick={() => {}}/> */}
       <br />
+
       <SimpleButton onClick={handleSearchRecipeClick}>search recipe api</SimpleButton>
       <br />
       <input type="file" onChange={handleFileChange}/>
+      <CVButton onFileUpload={(file) => setSelectedFile(file)} />
       <SimpleButton onClick={handleCVClick}>try cv api</SimpleButton>
     </div>
   );
