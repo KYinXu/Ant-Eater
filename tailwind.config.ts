@@ -14,7 +14,10 @@ export default {
         selected: "#fb7185",
         big1: "#FA9E00",
         big2: "#FF00AE",
-        x: "#FD4F57"
+        x: "#FD4F57",
+        offwhite: "#F7F7F7",
+        whitewhite: "#F6F6FF",
+        searchGray: "#EBEBEB"
       },
     },
   },

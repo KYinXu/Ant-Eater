@@ -10,12 +10,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearchChange }) => {
   };
 
   return (
-    <div className="p-4">
+    <div className="mt-4 mb-4">
       <input
         type="text"
         placeholder="Search..."
         onChange={handleChange}
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full p-2 border border-gray-300 rounded-full bg-searchGray"
       />
     </div>
   );
