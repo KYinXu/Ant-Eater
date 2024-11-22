@@ -70,7 +70,7 @@ export default function Home() {
           What ingredients do you have?
           <div className="flex flex-col bg-white/70 h-auto rounded-3xl mt-10 -mx-32 shadow-lg">
             <h2 className="flex text-3xl ml-14 my-auto pt-16 pb-10 text-gray-500">Upload an image</h2>
-            <div className="border-dashed border-4 border-gray-300 mx-14 py-36 text-xl mb-5 text-gray-500">drag and drop file or browse</div>
+            <div className="border-dashed border-4 border-gray-300 mx-14 py-36 text-xl mb-5 text-gray-500 hover:border-blue-700/50">drag and drop file or browse</div>
             <Link href="/search" className='flex ml-14 text-gray-400 text-xl mb-5 hover:underline'>Or, input manually</Link>
           </div>
         </h2>
