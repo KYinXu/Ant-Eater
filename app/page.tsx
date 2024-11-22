@@ -33,7 +33,7 @@ export default function Home() {
             <div className="flex bg-red-600 text-gray-900">
               <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
                 <div className='bg-green-600 w-4/5'>
-                  <h2 className="text-8xl font-extrabold text-left mb-6 px-11 bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
+                  <h2 className="text-8xl font-bebas font-black text-left mb-6 px-11 bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
                     As Pro ZotEaters
                   </h2>
                 </div>
