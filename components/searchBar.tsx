@@ -10,12 +10,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearchChange }) => {
   };
 
   return (
-    <div className="mt-4 mb-1 group">
+    <div className=" flex-initial mt-4 mb-1 group">
       <input
         type="text"
         placeholder="Search..."
         onChange={handleChange}
-        className="w-full p-2 border border-gray-300 rounded-full bg-searchGray group-hover:brightness-95"
+        className="w-auto p-2 border border-gray-300 rounded-full bg-searchGray group-hover:brightness-95"
       />
     </div>
   );

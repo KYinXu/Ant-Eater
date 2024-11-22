@@ -76,16 +76,20 @@ export default function SearchPage() {
       <div className="flex min-h-screen">
         {/* Left side: Expandable sections */}
         <div className="w-1/5 p-4">
-          <CVButton onFileUpload={handleFileUpload}>Upload another image</CVButton>
           
-          <div className="border-b-2 border-gray-700 mt-2 mb-2"></div>
+          
+          
+          <div className="flex">
           <SearchBar onSearchChange={handleSearchChange} />
+          <CVButton onFileUpload={handleFileUpload}>Upload another image</CVButton>
+          </div>
           <div className="ms-2">
           <SimpleButton onClick={clearIngredients}>
             Clear Ingredients
           </SimpleButton>
+          {/* <div className="border-b-2 border-gray-700 mt-2 mb-4"></div> */}
           </div>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap mt-2">
             {myIngredients.map(
               (ingredient) =>
                 <SearchItem
