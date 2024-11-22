@@ -70,18 +70,21 @@ export default function SearchPage() {
   };
 
   return (
-    <div>
-      <div className="flex justify-center items-center bg-gray-200 p-4">
+    <div className="bg-offwhite">
+      <div className="flex justify-center bg-whitewhite items-center p-4 border-b-2 border-stone-400">
         <h1 className="text-4xl font-bold">&Eater</h1>
       </div>
       <div className="flex min-h-screen">
         {/* Left side: Expandable sections */}
-        <div className="w-1/5 bg-gray-100 p-4">
+        <div className="w-1/5 p-4">
           <CVButton onFileUpload={handleFileUpload}>Upload another image</CVButton>
+          <div className="border-t border-gray-300 mt-2 mb-2"></div>
           <SimpleButton onClick={clearIngredients}>
             Clear Ingredients
           </SimpleButton>
+          <div className="border-b-2 border-gray-700 mt-2 mb-2"></div>
           <SearchBar onSearchChange={handleSearchChange} />
+          <div className="border-t border-gray-300 mt-2 mb-2"></div>
           <ExpandableSection title="Selected Ingredients">
             {myIngredients.map(
               (ingredient) =>

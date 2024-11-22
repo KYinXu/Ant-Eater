@@ -18,7 +18,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, isChecked, onToggle }) => {
         type="checkbox"
         checked={isChecked}
         onChange={handleToggle}
-        className="form-checkbox"
+        className="form-checkbox h-4 w-4 accent-black"
       />
       <span>{label}</span>
     </label>
