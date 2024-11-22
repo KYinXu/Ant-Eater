@@ -9,7 +9,7 @@ export default function Home() {
       <header className="flex justify-between items-center p-6">
         <h1 className="text-5xl font-rokkitt text-white">&Eater</h1>
         <nav>
-          <Link href="/search" className="text-lg font-semibold hover:underline">
+          <Link href="/search" className="text-white font-semibold hover:underline">
             Search
           </Link>
         </nav>
@@ -34,7 +34,7 @@ export default function Home() {
           <div className="">
             <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
               <div className=' w-4/5'>
-                <img src="/public/banana-man.jpg" className="text-8xl font-bebas font-black text-left mt-6" alt='picture of a banana'></img>
+                <img src="/public/banana-man.jpg" className="text-8xl font-bebas font-black text-left text-white mt-6" alt='picture of a banana'></img>
               </div>
             </main>
           </div>
