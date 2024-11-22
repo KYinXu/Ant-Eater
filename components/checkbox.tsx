@@ -20,7 +20,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, isChecked, onToggle }) => {
         onChange={handleToggle}
         className="form-checkbox h-4 w-4 accent-black"
       />
-      <span>{label}</span>
+      <span className="font-ibarra">{label}</span>
     </label>
   );
 };
