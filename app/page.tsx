@@ -26,7 +26,7 @@ export default function Home() {
               <h3 className="text-2xl text-left mb-9 font-ibarra w-4/5 text-white">
                 for all ants and eaters.
               </h3>
-              <Link href="/search" className="bg-white text-bg1 font-medium font-serif shadow py-3 px-6 rounded-lg hover:bg-bg2 hover:text-white transition duration-300">
+              <Link href="/search" className="bg-white text-bg1 text-3xl font-serif shadow py-4 px-6 rounded-3xl hover:bg-bg2 hover:text-white transition duration-300">
                 let's go!
               </Link>
             </main>
