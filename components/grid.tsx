@@ -13,7 +13,7 @@ const Grid: React.FC<GridProps> = ({ titles, images, rids }) => {
 
   useEffect(() => {
     // Initialize the grid based on the length of images and titles
-    const rows = Math.ceil(images.length / 3); // Assuming 3 columns
+    const rows = Math.floor(images.length / 3); // Assuming 3 columns
     const newGrid: { image: string; title: string; rid: string}[][] = [];
 
     for (let i = 0; i < rows; i++) {
