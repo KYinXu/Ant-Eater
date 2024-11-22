@@ -41,7 +41,7 @@ export default function Home() {
             alt='picture of a banana'/>
         </div>
       </div>
-      <div className="flex bg-white/50 h-auto mt-12 mb-24 mx-24 py-24 rounded-3xl justify-center text-center">
+      <div className="flex bg-white/50 h-auto mt-12 mb-24 mx-40 py-24 rounded-3xl justify-center text-center">
         <h2 className="font-bebas text-black text-7xl mb-15">
           Features
           <p className='flex flex-row font-ibarra text-5xl'>
@@ -52,11 +52,12 @@ export default function Home() {
           </p>
         </h2>
       </div>
-      <div className="flex bg-white/50 h-auto mx-24 mb-10 px-24 pt-8 pb-16 rounded-3xl justify-center text-center">
-        <h2 className="font-ibarra font-bold text-black text-5xl mt-10">
+      <div className="flex bg-white/50 h-auto mx-40 mb-10 px-24 pt-8 pb-16 rounded-3xl justify-center text-center">
+        <h2 className="font-ibarra font-bold text-black text-4xl mt-10">
           What ingredients do you have?
-          <div className="bg-white/70 h-96 rounded-3xl mt-10">
-            <div className="border-dashed border-4 border-gray-300  bg-green-400"></div>
+          <div className="flex flex-col bg-white/70 h-96 rounded-3xl mt-10 -mx-32 shadow-lg">
+            <h2 className="my-auto text-3xl py-24">Upload files</h2>
+            <div className="border-dashed border-4 border-gray-300 bg-gray-200 mx-14 py-36 text-xl mb-10">drop file or browse</div>
           </div>
         </h2>
       </div>
