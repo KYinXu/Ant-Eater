@@ -8,7 +8,7 @@ import Checkbox from '../../components/checkbox';
 
 export default function SearchPage() {
   // hardcoded
-  const [allIngredients, setAllIngredients] = useState<string[]>(["butter", "milk","eggs"]);
+  const [allIngredients, setAllIngredients] = useState<string[]>(["butter", "milk","egg"]);
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
@@ -17,7 +17,7 @@ export default function SearchPage() {
 
   const handleSearchRecipeClick = async () => {
     // check if myIngredients is empty, then use butter eggs
-    const recipes = myIngredients.length === 0 ? await getRecipes(['butter', 'eggs']) : await getRecipes(myIngredients);
+    const recipes = myIngredients.length === 0 ? await getRecipes(['butter', 'egg']) : await getRecipes(myIngredients);
     // theoretically, possible recipes should be parsed by kyle. then we map each one to a component
     setPossibleRecipes(await recipes)
   };
