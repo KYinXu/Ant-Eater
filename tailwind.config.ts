@@ -19,6 +19,10 @@ export default {
         whitewhite: "#F6F6FF",
         searchGray: "#EBEBEB"
       },
+      fontFamily: {
+        ibarra: ['Ibarra Real Nova'],
+        bebas: ['Bebas Neue']
+      }
     },
   },
   plugins: [],
