@@ -37,12 +37,6 @@ export default function Home() {
               className="-mt-5 ml-18 animate-bounceLess"
               alt='picture of a banana'
             />
-          <div className="">
-            <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
-              <div className=' w-4/5'>
-                <img src="https://i.ibb.co/XV5h9NF/Screen-Shot-2024-11-21-at-12-08-30-AM-removebg-preview.png" className="-mt-8 animate-bounce w-10/12" alt='picture of a banana'></img>
-              </div>
-            </main>
           </div>
         </div>
       </div>
