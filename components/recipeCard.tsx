@@ -27,6 +27,7 @@ export const RecipeCard: React.FC<SearchItemProps> = ({title, image, rid}) => {
           {link.length !== 0 && (
             <a
               href={link}
+              target={"_blank"}
               className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold"
             >
             </a>
