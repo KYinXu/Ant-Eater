@@ -43,7 +43,8 @@ export default function SearchPage() {
     const reader = new FileReader();
     reader.onloadend = async () => {
       const base64Data = (reader.result as string).split(',')[1];
-      setMyIngredients(await runRoboflowInference(base64Data));
+      const predicted = await runRoboflowInference(base64Data)
+      setMyIngredients([...myIngredients, ...predicted]);
     };
     reader.readAsDataURL(file);
   };

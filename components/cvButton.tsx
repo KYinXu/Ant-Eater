@@ -18,6 +18,7 @@ const CVButton: React.FC<CVButtonProps> = ({ onFileUpload, children}) => {
     if (event.target.files && event.target.files.length > 0) {
       const file = event.target.files[0];
       onFileUpload(file);
+      event.target.value = '';
     }
   };
 
