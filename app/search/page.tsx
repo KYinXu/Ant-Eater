@@ -3,16 +3,23 @@ import { useState } from 'react';
 import { SimpleButton } from '../../components/button';
 import { getRecipes } from '../../services/recipeService';
 import { runRoboflowInference } from '../../services/visionService';
-import { SearchItem } from '../../components/searchItem';
+import ExpandableSection from '../../components/expandableSection';
+import Checkbox from '../../components/checkbox';
 
 export default function SearchPage() {
+  // hardcoded
+  const [allIngredients, setAllIngredients] = useState<string[]>(["butter", "milk","eggs"]);
+
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
-
-  
+  const [myIngredients, setMyIngredients] = useState<string[]>([]);
+  const [possibleRecipes, setPossibleRecipes] = useState<string[]>([]);
 
   const handleSearchRecipeClick = async () => {
-    await getRecipes(['butter', 'egg']);
+    // check if myIngredients is empty, then use butter eggs
+    const recipes = myIngredients.length === 0 ? await getRecipes(['butter', 'eggs']) : await getRecipes(myIngredients);
+    // theoretically, possible recipes should be parsed by kyle. then we map each one to a component
+    setPossibleRecipes(await recipes)
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,14 +37,35 @@ export default function SearchPage() {
 
   const handleCVClick = async () => {
     if (base64Image) {
-      // const base64Data = base64Image.split(',')[1]; // Remove the data URL prefix
-      await runRoboflowInference(base64Image);
+      setMyIngredients(await runRoboflowInference(base64Image));
     }
   };
+
+  const toggleIngredient = (ingredient: string, checked: boolean) => {
+    setMyIngredients((prevIngredients) =>
+      checked ? [...prevIngredients, ingredient] : prevIngredients.filter((item) => item !== ingredient)
+    );
+  };
+
+  const clearIngredients = () => {
+    setMyIngredients([]);
+  };
+
+
 
   return (
     <div>
       <h1>Search Page</h1>
+
+      <ExpandableSection title="Essentials"> 
+        {allIngredients.map((ingredient) => (
+          <Checkbox key={ingredient} isChecked={myIngredients.includes(ingredient)} label={ingredient} onToggle={(checked) => toggleIngredient(ingredient, checked)} />
+        ))}
+      </ExpandableSection>
+      {myIngredients.map((ingredient) => (
+        <span key={ingredient}>{ingredient}</span>
+      ))}
+      <SimpleButton onClick={clearIngredients}>Clear Ingredients</SimpleButton>
       <p>This is the search page.</p>
       <SearchItem text="TESTING" onClick={() => {}}/>
       <br />
