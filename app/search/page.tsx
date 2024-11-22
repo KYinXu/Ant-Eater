@@ -18,7 +18,7 @@ export default function SearchPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
   const [myIngredients, setMyIngredients] = useState<string[]>([]);
-  const [possibleRecipes, setPossibleRecipes] = useState<string[]>([]);
+  const [possibleRecipes, setPossibleRecipes] = useState<string[][]>([]);
 
   const handleSearchRecipeClick = async () => {
     // check if myIngredients is empty, then use butter eggs
@@ -103,7 +103,7 @@ export default function SearchPage() {
         <CVButton onFileUpload={(file) => setSelectedFile(file)} />
         <SimpleButton onClick={handleCVClick}>try cv api</SimpleButton>
       </div>
-      <GridComponent />
+      <GridComponent titles={possibleRecipes[0]} images={possibleRecipes[1]}/>
     </div>
   );
 }
