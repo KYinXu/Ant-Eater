@@ -9,8 +9,8 @@ export default function Home() {
       <header className="flex justify-between items-center p-6">
         <h1 className="text-5xl font-rokkitt text-white">&Eater</h1>
         <nav>
-          <Link href="/search" className="text-white font-semibold hover:underline">
-            Search
+          <Link href="/search" className="text-white font-semibold hover:underline -mt-20">
+            search
           </Link>
         </nav>
       </header>
@@ -34,14 +34,13 @@ export default function Home() {
           <div className="">
             <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
               <div className=' w-4/5'>
-                <img src="/public/banana-man.jpg" className="text-8xl font-bebas font-black text-left text-white mt-6" alt='picture of a banana'></img>
+                <img src="https://i.ibb.co/XV5h9NF/Screen-Shot-2024-11-21-at-12-08-30-AM-removebg-preview.png" className="-mt-16" alt='picture of a banana'></img>
               </div>
             </main>
           </div>
         </div>
       </div>
-      <div className="flex flex-col bg-green-500 h-96">
-        <p>test</p>
+      <div className="flex bg-green-500 h-96 mx-24 rounded-3xl backdrop-opacity-60">
       </div>
       <footer className="flex justify-center items-center p-6 border-t">
           <p className="text-sm">&copy; 2024 | All rights reserved.</p>
