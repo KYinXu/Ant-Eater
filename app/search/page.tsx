@@ -74,12 +74,14 @@ export default function SearchPage() {
         {/* Left side: Expandable sections */}
         <div className="w-1/5 p-4">
           <CVButton onFileUpload={handleFileUpload}>Upload another image</CVButton>
-          <div className="border-t border-gray-300 mt-2 mb-2"></div>
+          
+          <div className="border-b-2 border-gray-700 mt-2 mb-2"></div>
+          <SearchBar onSearchChange={handleSearchChange} />
+          <div className="ms-2">
           <SimpleButton onClick={clearIngredients}>
             Clear Ingredients
           </SimpleButton>
-          <div className="border-b-2 border-gray-700 mt-2 mb-2"></div>
-          <SearchBar onSearchChange={handleSearchChange} />
+          </div>
           <div className="border-t border-gray-300 mt-2 mb-2"></div>
           <ExpandableSection title="Selected Ingredients">
             {myIngredients.map(

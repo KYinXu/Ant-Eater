@@ -15,9 +15,9 @@ export const SimpleButton: React.FC<SimpleButtonProps> = ({ children, onClick })
   return (
     <button
       onClick={onClick}
-      className="bg-tansparent hover:underline"
+      className="bg-tansparent"
     >
-      {children}
+      <div className="font-semibold text-sm text-zinc-500 hover:text-selected/80 font-sans">{children}</div>
     </button>
   );
 };
