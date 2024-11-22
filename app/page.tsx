@@ -45,11 +45,6 @@ export default function Home() {
             </Link>
           </main>
         </div>
-        <div>
-
-
-        </div>
-        
       </section>
       <footer className="flex justify-center items-center p-6 border-t">
           <p className="text-sm">&copy; 2024 | All rights reserved.</p>
