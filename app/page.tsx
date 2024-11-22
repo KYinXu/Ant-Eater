@@ -10,7 +10,7 @@ export default function Home() {
           &Eater
         </h1>
         <nav>
-          <Link href="/search" className="text-lg font-medium hover:underline">
+          <Link href="/search" className="text-lg font-semibold hover:underline">
             Search
           </Link>
         </nav>
