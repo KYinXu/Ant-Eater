@@ -27,6 +27,7 @@ export const getRecipes = async (ingredients: string[]) => {
     // console.log(response.data.results)
     // console.log(response.data.results[0])
     let recipes: any[] = Object.values(response.data.results);
+    console.log(recipes)
     const titles = recipes.map((obj: any) => obj['title']);
     const images = recipes.map((obj: any) => obj['img']);
     return [titles, images];
@@ -34,5 +35,4 @@ export const getRecipes = async (ingredients: string[]) => {
     console.error('Error fetching data:', error);
     throw error;
   }
-  //testing lulululululul
 };
