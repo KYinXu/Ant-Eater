@@ -71,7 +71,7 @@ export default function SearchPage() {
     <div className="bg-offwhite">
       <div className="flex row justify-center bg-whitewhite items-center p-4 border-b-2 border-stone-400">
         <div className="text-6xl font-black text-left bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
-          <div className="font-bebas">&Eater</div>
+          <a href="/"><div className="font-bebas">&Eater</div></a>
         </div>
       </div>
       <div className="flex min-h-screen">
