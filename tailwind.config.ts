@@ -17,11 +17,19 @@ export default {
         x: "#FD4F57",
         offwhite: "#F7F7F7",
         whitewhite: "#F6F6FF",
-        searchGray: "#EBEBEB"
+        searchGray: "#EBEBEB",
+        gradientFront: '#FA9E00',
+        gradientEnd: '#FF00AE',
+        bg1: "#EDF1F9",
+        bg2: "#EDF1F9"
+      },
+      backgroundImage: {
+        'gradient-text': 'linear-gradient(to right, var(--tw-gradient-stops))',
       },
       fontFamily: {
         ibarra: ['Ibarra Real Nova'],
-        bebas: ['Bebas Neue']
+        bebas: ['Bebas Neue'],
+        rokkitt: ['Rokkitt']
       },
       animation: {
         typewriter: 'typewrite 3s steps(11) forwards',
