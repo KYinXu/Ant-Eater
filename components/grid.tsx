@@ -29,10 +29,13 @@ export const RecipeCard: React.FC<SearchItemProps> = ({title, image, onClick}) =
     //     alignItems: 'center',
     //     border: '1px solid #ccc',
     //   }}
-    <div className="relative bg-indigo-100 size-full overflow-hidden">
-      {/* {title} */}
-      <span className="absolute left-5 bottom-5 z-10">{title}</span>
-      <img className="size-full relative object-fill brightness-75" src={image} />
+    <div className="relative size-full overflow-hidden ">
+        <p className="hover:text-selected">
+        <a className="group" href="/">
+            <span className="absolute left-5 bottom-5 z-10 font-bebas white text-white group-hover:text-selected text-lg">{title}</span>
+            <img className="z-0 size-full relative object-fill brightness-50" src={image} />
+        </a>
+        </p>
     </div>
     );
 }
