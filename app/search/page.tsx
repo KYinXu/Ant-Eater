@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect} from "react";
+import { useState, useEffect, use} from "react";
 import { SimpleButton } from "../../components/button";
 import { getRecipes } from "../../services/recipeService";
 import { runRoboflowInference } from "../../services/visionService";
@@ -10,6 +10,7 @@ import CVButton from "../../components/cvButton";
 import allIngredients from "./ingredients";
 import Grid from '../../components/grid';
 import SearchBar from "../../components/searchBar";
+import { getRecipeDetails } from "../../services/recipeService";
 
 export default function SearchPage() {
   const [visibleIngredients, setVisibleIngredients] = useState<string[]>([]);
@@ -126,7 +127,7 @@ export default function SearchPage() {
           </SimpleButton>
           {possibleRecipes[0] && possibleRecipes[1] && <Grid titles={possibleRecipes[0]} images={possibleRecipes[1]} />}
           </SimpleButton> */}
-          {possibleRecipes[0] && possibleRecipes[1] && <Grid titles={possibleRecipes[0]} images={possibleRecipes[1]}/>}
+          {possibleRecipes[0] && possibleRecipes[1] && possibleRecipes[2] && <Grid titles={possibleRecipes[0]} images={possibleRecipes[1]} rids={possibleRecipes[2]}/>}
         </div>
         
       </div>

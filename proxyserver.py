@@ -25,5 +25,22 @@ def proxy():
     except Exception as e:
         return jsonify({'error': f'Internal Server Error: {str(e)}'}), 500
 
+API_DETAILS_URL = 'https://d1.supercook.com/dyn/details'
+
+@app.route('/proxy/details', methods=['POST'])
+def proxy_details():
+    try:
+        # Get the incoming data 
+        data = request.get_json()
+        headers = {}
+        params = data['params']
+        
+        response = requests.post("https://d1.supercook.com/dyn/details", headers=headers, data=params)
+        return jsonify(response.json()), response.status_code
+    except requests.exceptions.RequestException as e:
+        return jsonify({'error': f'API Request failed: {str(e)}'}), 500
+    except Exception as e:
+        return jsonify({'error': f'Internal Server Error: {str(e)}'}), 500
+    
 if __name__ == '__main__':
     app.run(debug=True)
