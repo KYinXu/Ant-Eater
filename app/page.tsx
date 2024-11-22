@@ -62,8 +62,9 @@ export default function Home() {
         <h2 className="font-ibarra font-bold text-black text-4xl mt-10">
           What ingredients do you have?
           <div className="flex flex-col bg-white/70 h-auto rounded-3xl mt-10 -mx-32 shadow-lg">
-            <h2 className="my-auto text-3xl pt-16 pb-10">Upload an image</h2>
-            <div className="border-dashed border-4 border-gray-300 mx-14 py-36 text-xl mb-10">drag and drop file or browse</div>
+            <h2 className="flex ml-14 my-auto text-3xl pt-16 pb-10 text-gray-500">Upload an image</h2>
+            <div className="border-dashed border-4 border-gray-300 mx-14 py-36 text-xl mb-5 text-gray-500">drag and drop file or browse</div>
+            <Link href="/search" className='flex ml-14 text-gray-400 text-xl mb-5'>Or, input manually</Link>
           </div>
         </h2>
       </div>
