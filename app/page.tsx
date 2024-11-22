@@ -5,7 +5,7 @@ import SearchBar from "../components/searchBar"
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-bg1 to-bg2 text-gray-900">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-bg1 to-bg2 text-white">
       <header className="flex justify-between items-center p-6">
         <h1 className="text-5xl font-rokkitt text-white">&Eater</h1>
         <nav>
@@ -23,7 +23,7 @@ export default function Home() {
                   As Pro ZotEaters
                 </h2>
               </div>
-              <h3 className="text-2xl text-left mb-9 font-ibarra text-lext w-4/5 text-white">
+              <h3 className="text-2xl text-left mb-9 font-ibarra w-4/5 text-white">
                 for all ants and eaters.
               </h3>
               <Link href="/search" className="bg-white text-bg1 font-medium font-serif shadow py-3 px-6 rounded-lg hover:bg-bg2 hover:text-white transition duration-300">
