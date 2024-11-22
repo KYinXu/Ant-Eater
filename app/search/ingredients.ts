@@ -1,6 +1,12 @@
 // ingredients.ts
-const allIngredients: any[] = [
+interface IngredientName {
+  group_name: string;
+  ingredients: string[];
+}
+
+const allIngredients: IngredientName[] = [
   {
+    "group_name": "Pantry Essentials",
     "ingredients": [
         "butter",
         "egg",
@@ -45,6 +51,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Vegetables & Greens",
     "ingredients": [
         "garlic",
         "onion",
@@ -149,6 +156,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Mushrooms",
     "ingredients": [
         "button mushroom",
         "shiitake mushroom",
@@ -191,6 +199,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Fruits",
     "ingredients": [
         "lemon",
         "lime",
@@ -295,6 +304,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Berries",
     "ingredients": [
         "strawberry",
         "blueberry",
@@ -339,6 +349,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Nuts & Seeds",
     "ingredients": [
         "walnut",
         "pecan",
@@ -400,6 +411,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Cheeses",
     "ingredients": [
         "parmesan",
         "cream cheese",
@@ -504,6 +516,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Dairy & Eggs",
     "ingredients": [
         "butter",
         "egg",
@@ -604,6 +617,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Dairy-Free & Meat Substitutes",
     "ingredients": [
         "coconut milk",
         "almond milk",
@@ -708,6 +722,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Meats",
     "ingredients": [
         "bacon",
         "ground beef",
@@ -812,6 +827,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Poultry",
     "ingredients": [
         "chicken breast",
         "cooked chicken",
@@ -914,6 +930,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Fish",
     "ingredients": [
         "salmon",
         "smoked salmon",
@@ -1018,6 +1035,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Seafood & Seaweed",
     "ingredients": [
         "shrimp",
         "prawns",
@@ -1079,6 +1097,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Herbs & Spices",
     "ingredients": [
         "cinnamon",
         "parsley",
@@ -1183,6 +1202,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Sugar & Sweeteners",
     "ingredients": [
         "sugar",
         "brown sugar",
@@ -1287,6 +1307,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Seasonings & Spice Blends",
     "ingredients": [
         "italian seasoning",
         "seasoned salt",
@@ -1391,6 +1412,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Baking",
     "ingredients": [
         "flour",
         "vanilla",
@@ -1495,6 +1517,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Pre-Made Doughs & Wrappers",
     "ingredients": [
         "pie crust",
         "puff pastry",
@@ -1549,6 +1572,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Grains & Cereals",
     "ingredients": [
         "rolled oats",
         "white rice",
@@ -1653,6 +1677,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Legumes",
     "ingredients": [
         "peas",
         "green beans",
@@ -1727,6 +1752,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Pasta",
     "ingredients": [
         "short-cut pasta",
         "spaghetti",
@@ -1829,6 +1855,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Bread & Salty Snacks",
     "ingredients": [
         "bread",
         "bread crumbs",
@@ -1933,6 +1960,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Oils & Fats",
     "ingredients": [
         "olive oil",
         "vegetable oil",
@@ -2009,6 +2037,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Dressings & Vinegars",
     "ingredients": [
         "mayonnaise",
         "apple cider vinegar",
@@ -2090,6 +2119,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Condiments",
     "ingredients": [
         "soy sauce",
         "dijon mustard",
@@ -2194,6 +2224,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Canned Food",
     "ingredients": [
         "canned tomato",
         "capers",
@@ -2298,6 +2329,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Sauces, Spreads & Dips",
     "ingredients": [
         "tomato paste",
         "peanut butter",
@@ -2402,6 +2434,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Soups, Stews & Stocks",
     "ingredients": [
         "chicken broth",
         "vegetable broth",
@@ -2506,6 +2539,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Desserts & Sweet Snacks",
     "ingredients": [
         "cocoa",
         "dark chocolate",
@@ -2610,6 +2644,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Wine, Beer & Spirits",
     "ingredients": [
         "white wine",
         "red wine",
@@ -2714,6 +2749,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Beverages",
     "ingredients": [
         "orange juice",
         "coffee",
@@ -2818,6 +2854,7 @@ const allIngredients: any[] = [
     ]
 },
 {
+    "group_name": "Supplements & Extracts",
     "ingredients": [
         "almond extract",
         "food coloring",
