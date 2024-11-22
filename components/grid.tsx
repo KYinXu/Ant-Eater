@@ -29,9 +29,10 @@ export const RecipeCard: React.FC<SearchItemProps> = ({title, image, onClick}) =
     //     alignItems: 'center',
     //     border: '1px solid #ccc',
     //   }}
-    <div className="bg-indigo-100 size-full">
+    <div className="relative bg-indigo-100 size-full overflow-hidden">
       {/* {title} */}
-      <img className="object-fill brightness-50" src={image} />
+      <span className="absolute z-10">{title}</span>
+      <img className="size-full relative object-fill brightness-75" src={image} />
     </div>
     );
 }
@@ -59,12 +60,13 @@ const GridComponent: React.FC<GridProps> = ({showGrid, titles, images}) => {
       {/* <button onClick={generateGrid}>Generate Grid</button> */}
 
       <div
-        style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 25%)',
-            gap: '1%',
-            marginTop: '20px',
-        }}
+        className="grid grid-cols-3 gap-2 mt-3"
+        // style={{
+        //     display: 'grid',
+        //     gridTemplateColumns: 'repeat(4, 25%)',
+        //     gap: '1%',
+        //     marginTop: '20px',
+        // }}
       >
         {grid.map((item, index) => (
             
