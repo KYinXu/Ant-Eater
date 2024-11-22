@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import backgroundimage from "./bg.png"
+import bananaman from "/public/banana-man.png"
 
 export default function Home() {
   return (
@@ -13,15 +14,15 @@ export default function Home() {
         </nav>
       </header>
       <div className="container bg-white dark:bg-gray-900 mx-auto">
-        <div className="flex flex-row min-h-screen bg-blue-700 text-gray-900">
-          <div className="bg-red-600 text-gray-900">
+        <div className="grid grid-cols-2 min-h-screen bg-black text-gray-900">
+          <div className="bg-red-600 mt-10">
             <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
               <div className='bg-green-600 w-4/5'>
-                <h2 className="text-8xl font-bebas font-black text-left mb-6 px-11 bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
+                <h2 className="text-8xl font-bebas font-black text-left mt-6 bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
                   As Pro ZotEaters
                 </h2>
               </div>
-              <h3 className="text-2xl mb-8 font-ibarra text-lext bg-yellow-200 w-4/5">
+              <h3 className="text-2xl text-left mb-8 my-5 font-ibarra text-lext bg-yellow-200 w-4/5">
                 for all ants and eaters.
               </h3>
               <Link href="/search" className="bg-gray-200 text-x text-lg font-medium font-serif shadow py-3 px-6 rounded-lg hover:bg-x hover:text-white transition duration-300">
@@ -29,19 +30,11 @@ export default function Home() {
               </Link>
             </main>
           </div>
-          <div className="bg-black ">
+          <div className="bg-blue-700 mt-10">
             <main className="flex flex-col items-center justify-center flex-grow text-center py-20 px-4">
               <div className='bg-green-600 w-4/5'>
-                <h2 className="text-8xl font-bebas font-black text-left mb-6 bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
-                  As Pro ZotEaters
-                </h2>
+                <img src='./public/banana-man.jpg' alt='picture of a banana' className="text-8xl font-bebas font-black text-left mt-6  "></img>
               </div>
-              <h3 className="text-2xl mb-8 font-ibarra text-lext bg-yellow-200 w-4/5">
-                for all ants and eaters.
-              </h3>
-              <Link href="/search" className="bg-gray-200 text-x text-lg font-medium font-serif shadow py-3 px-6 rounded-lg hover:bg-x hover:text-white transition duration-300">
-                let's go!
-              </Link>
             </main>
           </div>
         </div>
