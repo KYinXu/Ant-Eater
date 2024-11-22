@@ -70,7 +70,7 @@ export default function SearchPage() {
   return (
     <div className="bg-offwhite">
       <div className="flex row justify-center bg-whitewhite items-center p-4 border-b-2 border-stone-400">
-        <div className="text-6xl font-black text-left bg-clip-text text-transparent bg-gradient-to-r from-bg1 to-bg2">
+        <div className="text-6xl font-black text-left bg-clip-text text-transparent bg-gradient-to-r from-bg2 to-bg1">
           {/* from-big1 to-big2 */}
           <a href="/"><div className="font-bebas">&Eater</div></a>
         </div>
