@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import backgroundimage from ".../bg.png";
 import bananaman from "../public/banana-man.png";
-import SearchBar from "../components/searchBar"
+import SearchBar from "../components/searchBar";
+import homeGif from "../public/eater-animation.gif";
 
 export default function Home() {
   return (
@@ -44,23 +45,24 @@ export default function Home() {
       <div className="flex flex-row bg-white/50 h-auto mt-12 mb-24 mx-40 py-24 rounded-3xl justify-center text-center">
         <h2 className="font-bebas text-black text-7xl mb-15">
           Features
-          <p className='flex flex-row font-ibarra text-3xl justify-center mx-20 mt-10'>
+          <p className='flex flex-row font-ibarra text-3xl justify-left mx-20 mt-10'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="flex flex-row size-12">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
             </svg>
             Discover recipes using a picture of your ingredients and more
           </p>
-          <p className='flex flex-row font-ibarra text-3xl justify-center mx-20 mt-10'>
+          <p className='flex flex-row font-ibarra text-3xl justify-left mx-20 mt-10'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="flex flex-row size-12">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
             </svg>
             Discover recipes by manually inputting ingredients
           </p>
         </h2>
-        <div className='flex flex-col bg-gray-100/80 rounded-3xl mr-24 min-w-80 shadow-md'>
+        {/* <div className='flex flex-col bg-gray-100/0 rounded-3xl mr-24 min-w-80 shadow-md'>
           <h3 className='flex flex-col font-ibarra font-semibold text-gray-600 text-xl mt-10'>Questions? Contact Us!</h3>
-          <p className='flex flex-col font-ibarra font-semibold text-gray-600 mt-8 text-sm'>...contact info...</p>
-        </div>
+          <p className='flex flex-col font-ibarra font-semibold text-gray-600 mt-8 text-sm'>...contact info...</p> 
+           <img src="favicon.ico" className="flex flex-colobject-cover"></img>
+        </div> */}
       </div>
       <div className="flex flex-col h-36"></div>
       <div className="flex bg-white/50 h-auto mx-40 mb-10 px-24 pt-8 pb-16 rounded-3xl justify-center text-center">
