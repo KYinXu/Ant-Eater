@@ -3,13 +3,16 @@ import { useState } from 'react';
 import { SimpleButton } from '../../components/button';
 import { getRecipes } from '../../services/recipeService';
 import { runRoboflowInference } from '../../services/visionService';
+import { SearchItem } from '../../components/searchItem';
 
 export default function SearchPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
 
+  
+
   const handleSearchRecipeClick = async () => {
-    await getRecipes(['butter', 'eggs']);
+    await getRecipes(['butter', 'egg']);
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,6 +39,7 @@ export default function SearchPage() {
     <div>
       <h1>Search Page</h1>
       <p>This is the search page.</p>
+      <SearchItem text="TESTING" onClick={() => {}}/>
       <br />
       <SimpleButton onClick={handleSearchRecipeClick}>search recipe api</SimpleButton>
       <br />
