@@ -13,11 +13,17 @@ import SearchBar from "../../components/searchBar";
 
 export default function SearchPage() {
   const [visibleIngredients, setVisibleIngredients] = useState<string[]>([]);
-
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
   const [myIngredients, setMyIngredients] = useState<string[]>([]);
   const [possibleRecipes, setPossibleRecipes] = useState<string[][]>([]);
+  
+  const [showGrid, setShowGrid] = useState<boolean>(false);
+
+  // Function to toggle the grid visibility
+  const toggleGrid = (): void => {
+    setShowGrid((prev) => !prev);
+  };
 
   const handleSearchRecipeClick = async () => {
     // check if myIngredients is empty, then use butter eggs
@@ -27,6 +33,7 @@ export default function SearchPage() {
         : await getRecipes(myIngredients);
     // theoretically, possible recipes should be parsed by kyle. then we map each one to a component
     setPossibleRecipes(await recipes);
+    toggleGrid();
   };
 
   useEffect(() => {
@@ -109,12 +116,14 @@ export default function SearchPage() {
 
         {/* Right side: Everything else */}
         <div className="flex-1 p-4">
-          <SimpleButton onClick={handleSearchRecipeClick}>
+          <SimpleButton onClick={() => handleSearchRecipeClick()}>
             search recipe api
           </SimpleButton>
+          <GridComponent showGrid={showGrid} titles={possibleRecipes[0]} images={possibleRecipes[1]}/>
         </div>
+        
       </div>
-      <GridComponent titles={possibleRecipes[0]} images={possibleRecipes[1]}/>
+      
     </div>
   );
 }

@@ -7,6 +7,7 @@ interface SearchItemProps {
 }
 
 interface GridProps {
+    showGrid: boolean;
     titles: string[];
     images: string[];
 }
@@ -19,27 +20,27 @@ export const RecipeCard: React.FC<SearchItemProps> = ({title, image, onClick}) =
     //         {image}
     //     </button>
     //   </div>  
-    <div
-      style={{
-        width: '100px',
-        height: '100px',
-        backgroundColor: '#f0f0f0',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        border: '1px solid #ccc',
-      }}
-    >
-      {title}
-      <img src={image} />
+    //   style={{
+    //     width: '100%',
+    //     height: '100px',
+    //     backgroundColor: '#f0f0f0',
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     border: '1px solid #ccc',
+    //   }}
+    <div className="bg-indigo-100 size-full">
+      {/* {title} */}
+      <img className="object-fill brightness-50" src={image} />
     </div>
     );
 }
 
 
-const GridComponent: React.FC<GridProps> = ({titles, images}) => {
+const GridComponent: React.FC<GridProps> = ({showGrid, titles, images}) => {
   // State to store the grid, which is an array of numbers
   const [grid, setGrid] = useState<number[]>([]);
+  const [shown, setShown] = useState<boolean>(false);
 
 
   const generateGrid = (): void => {
@@ -49,15 +50,19 @@ const GridComponent: React.FC<GridProps> = ({titles, images}) => {
     setGrid(newGrid);
   };
 
+  if (showGrid && !shown) {
+    generateGrid();
+    setShown((prev) => !prev);
+  }
   return (
     <div>
-      <button onClick={generateGrid}>Generate Grid</button>
+      {/* <button onClick={generateGrid}>Generate Grid</button> */}
 
       <div
         style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(4, 100px)',
-            gap: '10px',
+            gridTemplateColumns: 'repeat(4, 25%)',
+            gap: '1%',
             marginTop: '20px',
         }}
       >

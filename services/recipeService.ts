@@ -23,11 +23,10 @@ export const getRecipes = async (ingredients: string[]) => {
 
   try {
     const response = await axios.post(url, { params, headers });
-    console.log(response.data);
-    console.log(response.data.results)
-    console.log(response.data.results[0])
+    // console.log(response.data);
+    // console.log(response.data.results)
+    // console.log(response.data.results[0])
     let recipes: any[] = Object.values(response.data.results);
-    console.log(recipes)
     const titles = recipes.map((obj: any) => obj['title']);
     const images = recipes.map((obj: any) => obj['img']);
     return [titles, images];
