@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col h-36"></div>
-      <div className="flex bg-white/50 h-auto mt-12 mb-24 mx-40 py-24 rounded-3xl justify-center text-center">
+      <div className="flex flex-row bg-white/50 h-auto mt-12 mb-24 mx-40 py-24 rounded-3xl justify-center text-center">
         <h2 className="font-bebas text-black text-7xl mb-15">
           Features
           <p className='flex flex-row font-ibarra text-3xl justify-center mx-20 mt-10'>
@@ -57,6 +57,10 @@ export default function Home() {
             Discover recipes by manually inputting ingredients
           </p>
         </h2>
+        <div className='flex flex-col bg-gray-100/80 rounded-3xl mr-24 min-w-80 shadow-md'>
+          <h3 className='flex flex-col font-ibarra font-semibold text-gray-600 text-xl mt-10'>Questions? Contact Us!</h3>
+          <p className='flex flex-col font-ibarra font-semibold text-gray-600 mt-8 text-sm'>...contact info...</p>
+        </div>
       </div>
       <div className="flex flex-col h-36"></div>
       <div className="flex bg-white/50 h-auto mx-40 mb-10 px-24 pt-8 pb-16 rounded-3xl justify-center text-center">
