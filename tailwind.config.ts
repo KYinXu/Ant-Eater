@@ -18,8 +18,8 @@ export default {
         offwhite: "#F7F7F7",
         whitewhite: "#F6F6FF",
         searchGray: "#EBEBEB",
-        gradientFront: '#FA9E00',
-        gradientEnd: '#FF00AE',
+        gradientFront: "#FA9E00",
+        gradientEnd: "#FF00AE",
         bg1: "#EDF1F9",
         bg2: "#EDF1F9"
       },

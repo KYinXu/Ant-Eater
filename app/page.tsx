@@ -4,12 +4,9 @@ import bananaman from "../public/banana-man.png"
 
 export default function Home() {
   return (
-//     <div class="bg-[url('/img/hero-pattern.svg')]">
-//   <!-- ... -->
-// </div>
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-bg1 to-bg2 text-gray-900">
       <header className="flex justify-between items-center p-6">
-        <h1 className="text-3xl font-Rokkitt">
+        <h1 className="text-5xl font-rokkitt">
           &Eater
         </h1>
         <nav>
