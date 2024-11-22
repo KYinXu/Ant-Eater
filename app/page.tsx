@@ -10,7 +10,6 @@ export default function Home() {
         <a className="hover:cursor-pointer group"><h1 className="text-5xl font-rokkitt text-white ml-7 mt-2">&Eater</h1>
         <div className="ml-7 me-7 bg-white h-[5px] w-0 group-hover:w-10/12 transition-all duration-500"></div>
         </a>
-        
         <nav className="hover:-translate-y-1 transition-all duration-500">
           <div className="group">
             <Link href="/search" className="text-white font-semibold -mt-20 mr-10 text-xl">
@@ -62,9 +61,9 @@ export default function Home() {
         <h2 className="font-ibarra font-bold text-black text-4xl mt-10">
           What ingredients do you have?
           <div className="flex flex-col bg-white/70 h-auto rounded-3xl mt-10 -mx-32 shadow-lg">
-            <h2 className="flex ml-14 my-auto text-3xl pt-16 pb-10 text-gray-500">Upload an image</h2>
+            <h2 className="flex text-3xl ml-14 my-auto pt-16 pb-10 text-gray-500">Upload an image</h2>
             <div className="border-dashed border-4 border-gray-300 mx-14 py-36 text-xl mb-5 text-gray-500">drag and drop file or browse</div>
-            <Link href="/search" className='flex ml-14 text-gray-400 text-xl mb-5'>Or, input manually</Link>
+            <Link href="/search" className='flex ml-14 text-gray-400 text-xl mb-5 hover:underline'>Or, input manually</Link>
           </div>
         </h2>
       </div>
