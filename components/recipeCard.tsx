@@ -2,7 +2,7 @@ import React from 'react';
 //individual card
 
 interface SearchItemProps {
-    text: string;
+    title: string;
     onClick: () => void;
 }
 
