@@ -1,84 +1,46 @@
-import React, { useState } from 'react';
-
-interface SearchItemProps {
-    title: string;
-    image: string;
-    onClick: () => void;
-}
-
+import React, { useState, useEffect } from 'react';
+import { RecipeCard } from './recipeCard';
 interface GridProps {
-    showGrid: boolean;
     titles: string[];
     images: string[];
 }
 
-export const RecipeCard: React.FC<SearchItemProps> = ({title, image, onClick}) => {
-    return (
-    //   <div>
-    //     <button className="btn bg-selected text-white font-bold py-2 px-4 rounded-full">
-    //         {title}
-    //         {image}
-    //     </button>
-    //   </div>  
-    //   style={{
-    //     width: '100%',
-    //     height: '100px',
-    //     backgroundColor: '#f0f0f0',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     border: '1px solid #ccc',
-    //   }}
-    <div className="relative size-full overflow-hidden ">
-        <p className="hover:text-selected">
-        <a className="group" href="/">
-            <span className="absolute left-5 bottom-5 z-10 font-bebas white text-white group-hover:text-selected text-lg">{title}</span>
-            <img className="z-0 size-full relative object-fill brightness-50" src={image} />
-        </a>
-        </p>
-    </div>
-    );
-}
-
-
-const GridComponent: React.FC<GridProps> = ({showGrid, titles, images}) => {
+const Grid: React.FC<GridProps> = ({titles, images}) => {
   // State to store the grid, which is an array of numbers
-  const [grid, setGrid] = useState<number[]>([]);
-  const [shown, setShown] = useState<boolean>(false);
+  const [grid, setGrid] = useState<string[][]>([]);
 
+  useEffect(() => {
+    // Initialize the grid based on the length of images and titles
+    const rows = Math.ceil(images.length / 3); // Assuming 3 columns
+    const newGrid: string[][] = [];
 
-  const generateGrid = (): void => {
-    // For example, generate a grid of 4 rows and 4 columns (16 cells total)
-    const gridSize = 16;
-    const newGrid = Array.from({ length: gridSize }, (_, index) => index + 1);
+    for (let i = 0; i < rows; i++) {
+      const row: string[] = [];
+      for (let j = 0; j < 3; j++) {
+        const index = i * 3 + j;
+        if (index < images.length) {
+          row.push(images[index]);
+        }
+      }
+      newGrid.push(row);
+    }
+
     setGrid(newGrid);
-  };
+  }, [images, titles]);
 
-  if (showGrid && !shown) {
-    generateGrid();
-    setShown((prev) => !prev);
-  }
   return (
     <div>
-      {/* <button onClick={generateGrid}>Generate Grid</button> */}
-
-      <div
-        className="grid grid-cols-3 gap-2 mt-3"
-        // style={{
-        //     display: 'grid',
-        //     gridTemplateColumns: 'repeat(4, 25%)',
-        //     gap: '1%',
-        //     marginTop: '20px',
-        // }}
-      >
-        {grid.map((item, index) => (
-            
-            // Render each GridItem component and pass the item value as a prop
-            <RecipeCard key={index} image={images[index]} title={titles[index]} onClick={()=>{}}/>
+      <div className="grid grid-cols-3 gap-2 mt-3">
+        {grid.map((row, rowIndex) => (
+          <React.Fragment key={rowIndex}>
+            {row.map((image, colIndex) => (
+              <RecipeCard key={colIndex} image={image} title={titles[rowIndex * 3 + colIndex]} onClick={() => {}} />
+            ))}
+          </React.Fragment>
         ))}
       </div>
     </div>
   );
 };
 
-export default GridComponent;
+export default Grid;

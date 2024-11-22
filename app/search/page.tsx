@@ -8,32 +8,28 @@ import ExpandableSection from "../../components/expandableSection";
 import Checkbox from "../../components/checkbox";
 import CVButton from "../../components/cvButton";
 import allIngredients from "./ingredients";
-import GridComponent from '../../components/grid';
+import Grid from '../../components/grid';
 import SearchBar from "../../components/searchBar";
 
 export default function SearchPage() {
   const [visibleIngredients, setVisibleIngredients] = useState<string[]>([]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | null>(null);
-  const [myIngredients, setMyIngredients] = useState<string[]>([]);
+  const [myIngredients, setMyIngredients] = useState<string[]>(['egg']);
   const [possibleRecipes, setPossibleRecipes] = useState<string[][]>([]);
-  
-  const [showGrid, setShowGrid] = useState<boolean>(false);
 
-  // Function to toggle the grid visibility
-  const toggleGrid = (): void => {
-    setShowGrid((prev) => !prev);
-  };
+  useEffect(() => {
+    handleSearchRecipeClick();
+  }, [myIngredients]);
 
   const handleSearchRecipeClick = async () => {
     // check if myIngredients is empty, then use butter eggs
     const recipes =
       myIngredients.length === 0
-        ? await getRecipes(["butter", "egg"])
+        ? await getRecipes(['egg'])
         : await getRecipes(myIngredients);
     // theoretically, possible recipes should be parsed by kyle. then we map each one to a component
     setPossibleRecipes(await recipes);
-    toggleGrid();
   };
 
   useEffect(() => {
@@ -122,7 +118,7 @@ export default function SearchPage() {
           <SimpleButton onClick={() => handleSearchRecipeClick()}>
             search recipe api
           </SimpleButton>
-          <GridComponent showGrid={showGrid} titles={possibleRecipes[0]} images={possibleRecipes[1]}/>
+          {possibleRecipes[0] && possibleRecipes[1] && <Grid titles={possibleRecipes[0]} images={possibleRecipes[1]}/>}
         </div>
         
       </div>
