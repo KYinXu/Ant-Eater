@@ -57,7 +57,7 @@ export default function Home() {
           What ingredients do you have?
           <div className="flex flex-col bg-white/70 h-96 rounded-3xl mt-10 -mx-32 shadow-lg">
             <h2 className="my-auto text-3xl py-24">Upload files</h2>
-            <div className="border-dashed border-4 border-gray-300 bg-gray-200 mx-14 py-36 text-xl mb-10">drop file or browse</div>
+            <div className="border-dashed border-4 border-gray-300 bg-gray-200 mx-14 py-36 text-xl mb-10">drag and drop file or browse</div>
           </div>
         </h2>
       </div>
