@@ -6,6 +6,7 @@ import { runRoboflowInference } from '../../services/visionService';
 import { SearchItem } from '../../components/searchItem';
 import ExpandableSection from '../../components/expandableSection';
 import Checkbox from '../../components/checkbox';
+import GridComponent from '../../components/grid';
 
 export default function SearchPage() {
   // hardcoded
@@ -55,7 +56,7 @@ export default function SearchPage() {
 
 
   return (
-    <div>
+    <>
       <h1>Search Page</h1>
 
       <ExpandableSection title="Essentials"> 
@@ -74,6 +75,7 @@ export default function SearchPage() {
       <br />
       <input type="file" onChange={handleFileChange}/>
       <SimpleButton onClick={handleCVClick}>try cv api</SimpleButton>
-    </div>
+      <GridComponent />
+    </>
   );
 }
