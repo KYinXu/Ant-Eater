@@ -20,8 +20,8 @@ export default {
         searchGray: "#EBEBEB",
         gradientFront: "#FA9E00",
         gradientEnd: "#FF00AE",
-        bg1: "#EDF1F9",
-        bg2: "#EDF1F9"
+        bg1: "#D0D0FF",
+        bg2: "#FFBEAC"
       },
       backgroundImage: {
         'gradient-text': 'linear-gradient(to right, var(--tw-gradient-stops))',
