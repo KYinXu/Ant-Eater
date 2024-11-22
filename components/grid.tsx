@@ -31,7 +31,7 @@ const Grid: React.FC<GridProps> = ({ titles, images }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-3 mt-3">
+      <div className="grid grid-cols-3">
         {grid.map((row, rowIndex) => (
           <React.Fragment key={rowIndex}>
             {row.map((item, colIndex) => (

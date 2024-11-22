@@ -67,8 +67,10 @@ export default function SearchPage() {
 
   return (
     <div className="bg-offwhite">
-      <div className="flex justify-center bg-whitewhite items-center p-4 border-b-2 border-stone-400">
-        <h1 className="text-4xl font-bold">&Eater</h1>
+      <div className="flex row justify-center bg-whitewhite items-center p-4 border-b-2 border-stone-400">
+        <div className="text-6xl font-black text-left bg-clip-text text-transparent bg-gradient-to-r from-big1 to-big2">
+          <div className="font-bebas">&Eater</div>
+        </div>
       </div>
       <div className="flex min-h-screen">
         {/* Left side: Expandable sections */}
@@ -116,7 +118,7 @@ export default function SearchPage() {
         </div>
 
         {/* Right side: Everything else */}
-        <div className="flex-1 p-4">
+        <div className="flex-1">
           {/* <SimpleButton onClick={() => handleSearchRecipeClick()}>
             search recipe api
           </SimpleButton>
