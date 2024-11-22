@@ -41,13 +41,27 @@ export default function Home() {
             alt='picture of a banana'/>
         </div>
       </div>
-      <div className="flex bg-white h-96 mx-24 rounded-3xl opacity-50">
-        <h2 className="flex font-bebas text-black text-7xl justify-center text-center">
+      <div className="flex bg-white/50 h-auto mt-12 mb-24 mx-24 py-24 rounded-3xl justify-center text-center">
+        <h2 className="font-bebas text-black text-7xl mb-15">
           Features
+          <p className='flex flex-row font-ibarra text-5xl'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="flex flex-row size-12">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+            </svg>
+            test test testing test
+          </p>
+        </h2>
+      </div>
+      <div className="flex bg-white/50 h-auto mx-24 mb-10 px-24 pt-8 pb-16 rounded-3xl justify-center text-center">
+        <h2 className="font-ibarra font-bold text-black text-5xl mt-10">
+          What ingredients do you have?
+          <div className="bg-white/70 h-96 rounded-3xl mt-10">
+            <div className="border-dashed border-4 border-gray-300 mx-10 my-10 bg-green-400"></div>
+          </div>
         </h2>
       </div>
       <footer className="flex justify-center items-center p-6">
-p          <p className="text-sm">&copy; 2024 | All rights reserved.</p>
+          <p className="text-sm">&copy; 2024 | All rights reserved.</p>
       </footer>
     </div>
   );
