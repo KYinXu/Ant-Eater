@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <div className="flex mx-28 min-h-screen bg-green-900/0">
+      <div className="flex mx-28 bg-green-900/0">
         <main className=" hover:cursor-default py-20 px-4 ml-20 bg-green-600/0">
           <div className=' w-4/5 bg-green-500/0'>
             <h2 className="text-9xl font-bebas font-black text-left mt-6 text-white">
@@ -33,13 +33,14 @@ export default function Home() {
             let's go!
           </Link>
         </main>
-        <div className='flex w-4/5 bg-white/0 items-center justify-center -mt-40'>
+        <div className='flex w-4/5 bg-white/0 items-center justify-center'>
           <img
             src="https://i.ibb.co/XV5h9NF/Screen-Shot-2024-11-21-at-12-08-30-AM-removebg-preview.png"
             className="justify-center animate-bounceLess"
             alt='picture of a banana'/>
         </div>
       </div>
+      <div className="flex flex-col h-36"></div>
       <div className="flex bg-white/50 h-auto mt-12 mb-24 mx-40 py-24 rounded-3xl justify-center text-center">
         <h2 className="font-bebas text-black text-7xl mb-15">
           Features
@@ -57,6 +58,7 @@ export default function Home() {
           </p>
         </h2>
       </div>
+      <div className="flex flex-col h-36"></div>
       <div className="flex bg-white/50 h-auto mx-40 mb-10 px-24 pt-8 pb-16 rounded-3xl justify-center text-center">
         <h2 className="font-ibarra font-bold text-black text-4xl mt-10">
           What ingredients do you have?
