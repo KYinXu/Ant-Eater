@@ -11,7 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        selected: "#fb7185"
+        selected: "#fb7185",
+        big1: "#FA9E00",
+        big2: "#FF00AE"
       },
     },
   },
