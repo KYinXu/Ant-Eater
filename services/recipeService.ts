@@ -24,6 +24,7 @@ export const getRecipes = async (ingredients: string[]) => {
   try {
     const response = await axios.post(url, { params, headers });
     console.log(response.data);
+    
     return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);
